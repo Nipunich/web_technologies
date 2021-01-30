@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+
+		$(document).ready(function () {
+			$("#btnSubmit").click(function () {
+				// alert("Hello");
+				$.ajax({
+					type: "POST",
+					url: "http://localhost:8080/nipuni/index.php",
+					data: {
+						myName: "Nipuni Chandimali"
+					},
+					success: function (output) {
+						alert(output);
+					}
+				});
+			});
+		});
+	</script>
+</head>
+
+<body>
+
+	<h1>The XMLHttpRequest Object</h1>
+
+	<p id="demo">Let AJAX change this text.</p>
+
+	<form>
+		<button id="btnSubmit">Cick me ! </button>
+	</form>
+
+
+</body>
+
+</html>

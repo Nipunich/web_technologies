@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title> AJAX Example</title>
+</head>
+
+<body>
+    <h2> Getting started with AJAX</h2>
+
+    <button type = "button" onClick="onClick()"> Click here</button>
+
+    <script>
+        var xttp = new XMLHttpRequest();
+
+        xttp.open("GET", "info_infox.txt", true);
+        xttp.send();
+
+        xttp.onreadystatechange = function (){
+           if(xttp.readyState == 4 && this.status == 200){
+               document.writeln(this.responseText);
+           }
+        }
+    </script>
+</body>
+</html>
