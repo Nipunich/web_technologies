@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+
+<head>
+    <title>AngularJS</title>
+    <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
+    <script src="form.js"></script>
+</head>
+
+<body ng-controller="myController">
+    <div>
+       
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value="John" ng-model="firstName"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value="Doe" ng-model="lastName"><br><br>
+            <input type="submit" value="Submit" ng-click="insertData()">
+         
+      </div>
+      {{employee.firstName}}
+      {{employee.lastName}}
+    </body>
+    </html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+
+<head>
+    <title>AngularJS</title>
+    <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
+    <script src="ng_model_ex.js"></script>
+</head>
+
+<body>
+    <div ng-controller="myController">
+        <input type="text" ng-model="test" />
+
+        <br><br>
+        {{message}}
+
+        <br><br>
+        {{test}}
+    </div>
+</body>
+
+</html>

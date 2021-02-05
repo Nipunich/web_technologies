@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+
+<head>
+    <title>AngularJS</title>
+    <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
+    <script src="employee_form.js"></script>
+</head>
+
+<body ng-controller="addEmployeeController">
+    <div>
+
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value="John" ng-model="firstName"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value="Doe" ng-model="lastName"><br>
+        <label for="salary">Salary:</label><br>
+        <input type="text" id="salary" name="salary" value="150000" ng-model="salary"><br><br>
+        <input type="submit" value="Submit" ng-click="insertData()">
+
+    </div> <br><br>
+
+    <div>
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit" ng-click="getData()"><i class="fa fa-search"></i>Search</button>
+    </div>
+
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="employee in employeeData">
+                    <h1>{{student}}</h1>
+                    <td> {{ employee.firstName }} </td>
+                    <td> {{ employee.lastName }} </td>
+                    <td> {{ employee.salary }} </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>

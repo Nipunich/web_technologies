@@ -7,13 +7,10 @@
 
 		$(document).ready(function () {
 			$("#btnSubmit").click(function () {
-				// alert("Hello");
-				$.ajax({
+				
+				writeln = $.ajax({
 					type: "POST",
-					url: "http://localhost:8080/nipuni/index.php",
-					data: {
-						myName: "Nipuni Chandimali"
-                    },
+					url: "http://localhost:8080/nipuni/ajax_info.txt"
                 });
 			});
 		});
@@ -27,7 +24,7 @@
 	<p id="demo">Let AJAX change this text.</p>
 
 	<form>
-		<button id="btnSubmit">Cick me ! </button>
+		<button id="btnSubmit">Change Content ! </button>
 	</form>
 </body>
 </html>
