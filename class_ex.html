@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+
+<head>
+    <title>AngularJS</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
+    <script src="class_ex.js"></script>
+</head>
+
+<body ng-controller="addEmployeeController">
+
+    <div>
+        <label for="fName"> First Name</label> <br>
+        <input type="text" id="fName" name="fName" value="John" ng-model="firstName"><br>
+        <label for="lName"> Last Name</label> <br>
+        <input type="text" id="lName" name="lName" value="Doe" ng-model="lastName"><br>
+        <label for="salary"> Salary</label> <br>
+        <input type="text" id="salary" name="salary" value="0" ng-model="salary"><br>
+        <input type="submit" value="Submit" ng-click="insertFormData()">
+    </div>
+</body>
+
+</html>

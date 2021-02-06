@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        var dataReq = { category: "client", type: "premium" };
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#div1").load("https://run.mocky.io/v3/b5277374-8c22-4354-b20d-eb44a8c8c8a8gg", function (responseTxt, statusTxt, xhr) {
+                    if (statusTxt == "success") {
+                        alert("Successful page loading !!");
+                    }
+                    else if (statusTxt == "error") {
+                        alert("Unsuccessful page loading !!" + "error status"+ xhr.statusTxt + "error status"+ xhr.status);
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="div1">
+        <h3> My content will be replaced by server content </h3>
+    </div>
+    <button>
+        Send an HTTP GET request
+    </button>
+</body>
+
+</html>
